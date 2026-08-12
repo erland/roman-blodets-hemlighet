@@ -33,3 +33,14 @@ Aktiv kapiteltext finns ännu inte i `kapitel/`. Nästa steg är att skriva:
 - `stilguide.md` – ton, perspektiv och språklig riktning.
 - `projektstatus.md` – aktuellt läge och nästa steg.
 - `kontinuitetsanteckningar.md` – aktiv kanon för den nya versionen.
+
+
+## GitHub Actions och publicering
+
+Projektet innehåller GitHub Actions-stöd i `.github/workflows/` för:
+
+- validering av projektstruktur och kapitel
+- manuell preview-export till EPUB och PDF
+- release-export vid `v*`-taggar
+
+Bygg- och valideringslogik finns i `scripts/`. Publiceringsinställningar finns i `publishing/`.

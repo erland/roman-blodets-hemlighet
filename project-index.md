@@ -7,7 +7,7 @@
 - Senast uppdaterad: 2026-05-27
 - Nuvarande fas: Reviderat fullständigt utkast – exportklart efter revisionspass 5
 - Senast godkända kapitel: Kapitel 32 – Det som inte längre kan döljas
-- Nästa kapitel: Första utkast komplett – nästa steg är EPUB/PDF-export
+- Nästa kapitel: Första utkast komplett – nästa steg är GitHub Actions-preview eller EPUB/PDF-export
 - Omslagsbild: Skapad/inlagd – `omslag/blodets_hemlighet_den_forsta_gnistan.png`
 
 ## Kapitelinventering
@@ -97,3 +97,16 @@
 - Revisionspass 3 genomfört: finalens kroppslighet och kraftkostnad. Kapitel ändrade: 30, 31, 32.
 - Revisionspass 4 genomfört: relationer och Miras åldersröst. Kapitel ändrade: 3, 7, 12, 17, 25, 30, 32.
 - Revisionspass 5 genomfört: slutstatus och exportberedskap synkad. Rekommenderat nästa steg: skapa EPUB/PDF med omslag.
+
+
+## GitHub Actions och publicering
+| Fil | Syfte | Status |
+|---|---|---|
+| `.github/workflows/01-validate.yml` | Validerar projekt och kapitel vid PR/push | OK |
+| `.github/workflows/02-build-preview.yml` | Manuellt preview-bygge av EPUB/PDF | OK |
+| `.github/workflows/03-release.yml` | Release-bygge vid `v*`-taggar | OK |
+| `scripts/validate_project.py` | Lokal/CI-validering | OK |
+| `scripts/build_book.py` | Lokal/CI-export till EPUB/PDF | OK |
+| `publishing/metadata.yaml` | Exportmetadata | OK |
+| `publishing/epub.css` | EPUB-stil | OK |
+| `publishing/pdf-template.tex` | PDF-mall | OK |

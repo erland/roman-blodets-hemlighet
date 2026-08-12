@@ -52,3 +52,5 @@
 
 ## Nästa rekommenderade steg
 Nästa rekommenderade steg: genomför tempo-/stramningspass på kapitel 4 och 25, eller gå vidare till slutlig exportkontroll om nuvarande tempo accepteras.
+
+| 2026-08-12 | GitHub Actions-publicering införd | Lade till `.github/workflows/`, `scripts/` och `publishing/` enligt publiceringskitets koncept. |

@@ -7,7 +7,7 @@ Reviderat fullständigt utkast – exportklart. Revisionspass 1–5 är genomfö
 - Senast ändrad: Revisionspass 5 genomfört i status-, revisions-, index- och exportmetadatafiler.
 - Kapiteltexter ändrade i revisionspass 5: Nej.
 ## Nästa rekommenderade steg
-Skapa EPUB och PDF från `kapitel/kapitel-01.md` till `kapitel/kapitel-32.md` med aktiv omslagsbild `omslag/blodets_hemlighet_den_forsta_gnistan.png`.
+Skapa EPUB och PDF från `kapitel/kapitel-01.md` till `kapitel/kapitel-32.md` med aktiv omslagsbild `omslag/blodets_hemlighet_den_forsta_gnistan.png`, antingen lokalt via `scripts/build_book.py` eller i GitHub Actions via Build Preview.
 
 Valfria putspunkter som inte blockerar export:
 1. Tempo-/stramningspass på kapitel 4 och 25.
@@ -56,3 +56,10 @@ Valfria putspunkter som inte blockerar export:
 - Nästa rekommenderade steg: skapa EPUB och PDF med omslagsbild.
 ## Omslagsstatus
 Omslagsbilden är skapad och inlagd i projektzipen som `omslag/blodets_hemlighet_den_forsta_gnistan.png`.
+
+
+## GitHub Actions och publicering
+- GitHub Actions infört enligt publiceringskitets koncept 2026-08-12.
+- `.github/` ligger på samma nivå som `README.md`.
+- Preview-workflow bygger EPUB och PDF som ett gemensamt artifact: `blodets-hemlighet-preview`.
+- Release-workflow publicerar EPUB och PDF som separata GitHub Release assets vid `v*`-taggar.
